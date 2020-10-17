@@ -1,0 +1,41 @@
+
+{
+    "manifest_version": 1,
+    "version": 1,
+    "type": "APP",
+    "name": {
+        "ja": "Comment Viewer",
+        "en": "Comment Viewer",
+        "zh": "评论查看插件"
+    },
+    "description": {
+        "ja": "任意アプリの全コメントを一覧表示するプラグインです。",
+        "en": "It is a plugin to view all comments in any app",
+        "zh": "它是用于查看任何应用程序中所有评论的插件。"
+    },
+    "icon": "image/icon.png",
+    "desktop": {
+        "js": [
+            "js/comment_viewer.js"
+        ],
+        "css": [
+            "css/comment_viewer.css"
+        ]
+    },
+    "mobile": {
+        "js": [
+            "js/mobile_comment_viewer.js"
+        ]
+    },
+    "config": {
+        "html": "html/config.html",
+        "js": [
+            "https://js.cybozu.com/jquery/1.11.1/jquery.min.js",
+            "js/config.js"
+        ],
+        "css": [
+                "css/config.css",
+                "css/51-modern-default.css"
+        ]
+    }
+}

@@ -1,0 +1,29 @@
+<div id="app">
+    <p><b>コメント表示するアプリを選択してください</b></p>
+    <select id="sel_app" v-model="selected" onchange="view_comments('sel_app')">
+        <option value="" style="display: none;">選択してください</option>
+        <option v-for="option in options" v-bind:value="option.id" v-bind:key="option.id">
+            {{ option.name }}
+        </option>
+    </select>
+    <div>
+        <table class="table_box">
+            <thead>
+                <tr>
+                    <th>レコード</th>
+                    <th onclick="sortBy('date')">日時 ▼</th>
+                    <th onclick="sortBy('user')">投稿者 ▼</th>
+                    <th>コメント</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="row in comments">
+                    <td class="record"><a href="{{row.record}}" target="_blank" rel="noopener noreferrer">●</a></td>
+                    <td class="date">{{row.date}}</td>
+                    <td class="user">{{row.user}}</td>
+                    <td class="comment">{{row.comment}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
